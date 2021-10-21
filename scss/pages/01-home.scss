@@ -42,7 +42,7 @@
       margin: 0 0 30px 0;
       line-height: 1.2em;
       position: relative;
-      padding: 0 0 0 30px;
+      padding: 0 0 0 20px;
 
       &::before {
         top: 0;
@@ -59,9 +59,12 @@
       h1 {
         font-size: 56px;
       }
+      h2 {
+        padding: 0 0 0 30px;
+      }
     }
 
-    @media all and (min-width: $tablet) {
+    @media all and (min-width: $desktop) {
       h1 {
         font-size: 72px;
       }
@@ -113,5 +116,57 @@
         }
       }
     }
+  }
+}
+
+.homepage-intro-text {
+  padding: 50px 0;
+
+  p.subtitle {
+    color: $grey400;
+    font-size: 18px;
+    font-weight: 400;
+    margin: 0 0 30px 0;
+    line-height: 1.2em;
+    position: relative;
+    padding: 0 0 0 20px;
+
+    &::before {
+      top: 0;
+      left: 3px;
+      width: 3px;
+      content: "";
+      height: 100%;
+      position: absolute;
+      background-color: $teal;
+    }
+  }
+
+  p.title {
+    margin: 0;
+    color: $grey400;
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 1.4em;
+    text-indent: 30px;
+  }
+
+  @media all and (min-width: $mobile) {
+    p.title {
+      font-size: 38px;
+    }
+  }
+
+  @media all and (min-width: $tablet) {
+    padding: 100px 0;
+
+    p.title {
+      font-size: 48px;
+      text-indent: 80px;
+    }
+  }
+
+  @media all and (min-width: $desktop) {
+    padding: 200px 0;
   }
 }
