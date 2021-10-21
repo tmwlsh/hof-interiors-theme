@@ -19,6 +19,13 @@
 	$homeIntro = get_field('home_intro_text');
 	$homeIntroSubtitle = $homeIntro['intro_text_sub_title'];
 	$homeIntroTitle = $homeIntro['intro_text_title'];
+
+	$homeImgTxt = get_field('home_image_text');
+	$homeImgTxtImg = $homeImgTxt['image'];
+	$homeImgTxtTitle = $homeImgTxt['title'];
+	$homeImgTxtText1 = $homeImgTxt['text_1'];
+	$homeImgTxtText2 = $homeImgTxt['text_2'];
+	$homeImgTxtLink = $homeImgTxt['link'];
 ?>
 
 <div class="homepage-header">
@@ -51,6 +58,21 @@
 	<div class="container medium">
 		<p class="subtitle"><?php echo $homeIntroSubtitle; ?></p>
 		<p class="title"><?php echo $homeIntroTitle; ?></p>
+	</div>
+</div>
+
+<div class="homepage-image-text">
+	<div class="container large">
+		<div class="homepage-image-text-inner">
+			<div class="homepage-image-text-image">
+				<img src="<?php echo $homeImgTxtImg[url]; ?>" alt="<?php echo $homeImgTxtImg['alt']; ?>" />
+			</div>
+			<div class="homepage-image-text-content">
+				<p class="title"><?php echo $homeImgTxtTitle; ?></p>
+				<p class="text-1"><?php echo $homeImgTxtText1; ?></p>
+				<p class="text-2"><?php echo $homeImgTxtText2; ?></p>
+			</div>
+		</div>
 	</div>
 </div>
 
