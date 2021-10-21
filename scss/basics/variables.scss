@@ -1,0 +1,20 @@
+/* Variables */
+$transition: cubic-bezier(0.54, 0.11, 0.44, 0.91);
+
+/* Colors */
+$white: #fff;
+$black: #000;
+$teal: #00ffc0;
+$grey100: #d8d8d8;
+$grey200: #999999;
+$grey300: #505050;
+$grey400: #1d1d1d;
+
+/* Breakpoints */
+$mobile: 620px;
+$tablet: 960px;
+$desktop: 1260px;
+
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;700&display=swap");
+$poppins: "Poppins", sans-serif;

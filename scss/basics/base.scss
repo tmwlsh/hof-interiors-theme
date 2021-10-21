@@ -1,0 +1,43 @@
+@import "./variables.scss";
+
+::-moz-selection {
+  background: black;
+  color: #fff;
+}
+
+::selection {
+  background: black;
+  color: #fff;
+}
+
+body {
+  margin: 0;
+  font-family: $poppins;
+}
+
+div.container {
+  display: block;
+  margin: 0 auto;
+  padding: 0 30px;
+  box-sizing: border-box;
+
+  &.small {
+    max-width: 960px;
+  }
+
+  &.medium {
+    max-width: 1240px;
+  }
+
+  &.large {
+    max-width: 1920px;
+  }
+
+  &.full {
+    max-width: 100%;
+  }
+
+  &.no-padd {
+    padding: 0;
+  }
+}

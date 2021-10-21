@@ -1,0 +1,164 @@
+.header {
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  padding: 15px 0;
+  position: absolute;
+
+  @media all and (min-width: $mobile) {
+    padding: 30px 0;
+  }
+}
+
+.header-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+
+  ul {
+    padding: 0;
+    display: none;
+    margin: 0 0 0 50px;
+    align-items: center;
+
+    li {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+
+      a {
+        padding: 10px;
+        color: $white;
+        display: block;
+        font-size: 18px;
+        text-decoration: none;
+      }
+    }
+  }
+
+  @media all and (min-width: $tablet) {
+    ul {
+      display: flex;
+    }
+  }
+
+  @media all and (min-width: $desktop) {
+    ul {
+      margin: 0 0 0 150px;
+    }
+  }
+}
+
+.header-logo {
+  font-size: 0;
+  display: inline-block;
+
+  svg {
+    width: 220px;
+    * {
+      fill: $white;
+    }
+  }
+}
+
+.header-contact-cta {
+  display: none;
+  color: $white;
+  font-size: 18px;
+  padding: 15px 20px;
+  text-decoration: none;
+  background-color: $grey400;
+
+  svg {
+    width: 25px;
+    margin-left: 10px;
+
+    * {
+      fill: $teal;
+    }
+  }
+
+  @media all and (min-width: $mobile) {
+    display: flex;
+  }
+
+  @media all and (min-width: $desktop) {
+    padding: 20px 30px;
+
+    svg {
+      margin-left: 30px;
+    }
+  }
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+.header-hamb {
+  width: 52px;
+  height: 52px;
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  transition: 0.5s $transition;
+
+  .line {
+    left: 50%;
+    width: 32px;
+    height: 2px;
+    position: absolute;
+    pointer-events: none;
+    background-color: $white;
+    transform: translateX(-50%);
+    transition: 0.5s $transition;
+
+    &:nth-of-type(1) {
+      top: 16px;
+    }
+
+    &:nth-of-type(2) {
+      top: 25px;
+    }
+
+    &:nth-of-type(3) {
+      top: 34px;
+    }
+  }
+
+  &.open {
+    transform: rotate(180deg);
+
+    .line {
+      &:nth-of-type(1) {
+        top: 25px;
+        transform: translateX(-50%) rotate(-45deg);
+      }
+
+      &:nth-of-type(2) {
+        opacity: 0;
+      }
+
+      &:nth-of-type(3) {
+        top: 25px;
+        transform: translateX(-50%) rotate(45deg);
+      }
+    }
+  }
+
+  @media all and (min-width: $mobile) {
+    margin-right: 30px;
+  }
+
+  @media all and (min-width: $tablet) {
+    display: none;
+  }
+}

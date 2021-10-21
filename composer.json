@@ -1,0 +1,16 @@
+{
+    "name": "tmwlsh/starter_theme",
+    "type": "wordpress-theme",
+    "license": "BSD-3-Clause",
+    "description": "Starter theme for Wordpress.",
+    "keywords":[
+      "wordpress"
+    ],
+    "authors": [
+        {
+            "name": "Tom Walsh",
+            "email": "hello@tmwlsh.co.uk"
+        }
+    ],
+    "homepage": "http://www.tmwlsh.co.uk"
+}
