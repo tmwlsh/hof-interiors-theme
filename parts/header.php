@@ -1,3 +1,7 @@
+<div class="mobile-header">
+	<nav><?php wp_nav_menu( array( 'container_class' => 'primary-nav', 'theme_location' => 'header-menu' ) ); ?></nav>
+</div>
+
 <header class="header">
 	<div class="container large">
 		<div class="header-inner">
@@ -11,7 +15,7 @@
 					<div class="line"></div>
 					<div class="line"></div>
 				</div>
-				<a class="header-contact-cta" href="#">
+				<a class="header-contact-cta" href="<?php echo home_url(); ?>/contact">
 					<span>Get in touch</span>
 					<?php echo file_get_contents( get_stylesheet_directory_uri() . '/img/arrow.svg' ); ?>
 				</a>

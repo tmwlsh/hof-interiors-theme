@@ -4,6 +4,8 @@
 
     $(".header-hamb").click(function() {
       $(this).toggleClass("open");
+      $(".header").toggleClass("open");
+      $(".mobile-header").toggleClass("open");
     });
 
     $('.homepage-work-slider-inner').slick({
