@@ -62,17 +62,49 @@
 </div>
 
 <div class="homepage-image-text">
-	<div class="container large">
+	<div class="container medium">
 		<div class="homepage-image-text-inner">
 			<div class="homepage-image-text-image">
 				<img src="<?php echo $homeImgTxtImg[url]; ?>" alt="<?php echo $homeImgTxtImg['alt']; ?>" />
 			</div>
 			<div class="homepage-image-text-content">
-				<p class="title"><?php echo $homeImgTxtTitle; ?></p>
-				<p class="text-1"><?php echo $homeImgTxtText1; ?></p>
-				<p class="text-2"><?php echo $homeImgTxtText2; ?></p>
+				<?php if ($homeImgTxtTitle): ?>
+					<p class="title"><?php echo $homeImgTxtTitle; ?></p>
+				<?php endif; ?>
+				<?php if ($homeImgTxtText1): ?>
+					<p class="text-1"><?php echo $homeImgTxtText1; ?></p>
+				<?php endif; ?>
+				<?php if ($homeImgTxtText2): ?>
+					<p class="text-2"><?php echo $homeImgTxtText2; ?></p>
+				<?php endif; ?>
+				<?php if ($homeImgTxtLink['url']): ?>
+					<a href="<?php echo $homeImgTxtLink['url']; ?>">
+						<span><?php echo $homeImgTxtLink['title']; ?></span>
+						<?php echo file_get_contents( get_stylesheet_directory_uri() . '/img/arrow.svg' ); ?>
+					</a>
+				<?php endif; ?>
 			</div>
 		</div>
+	</div>
+</div>
+
+<div class="homepage-work-slider">
+	<div class="container medium">
+		<h3>Our Work</h3>
+	</div>
+	<div class="homepage-work-slider-inner">
+		<?php $loop = new WP_Query(array('post_type' => 'work', 'posts_per_page' => 9)); ?>
+			<?php $index = $wp_query->current_post + 1; ?>
+			<?php while ( $loop->have_posts() ) : $loop->the_post(); $count++; ?>
+				<div>
+					<a href="<?php echo get_the_permalink(); ?>">
+						<p>Read</br>More</p>
+						<span><?php echo '0' . $count; ?></span>
+						<img src="<?php echo get_the_post_thumbnail_url(); ?>" />
+					</a>
+				</div>
+			<?php endwhile; ?>
+		<?php wp_reset_postdata(); ?>
 	</div>
 </div>
 
